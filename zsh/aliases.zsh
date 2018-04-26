@@ -7,6 +7,7 @@ fi
 
 alias l="ls"
 alias ll="ls -lh"
+alias lla="ls -la"
 alias la="ls -a"
 alias l.='ls -d .*'
 
