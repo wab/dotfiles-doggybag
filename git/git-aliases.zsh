@@ -1,4 +1,4 @@
-# - Git - 
+# - Git -
 alias g='git'
 alias s="git status"
 
@@ -9,6 +9,7 @@ alias gapa='git add --patch'
 alias gb='git branch'
 
 alias gc='git commit -v'
+alias gcm='git commit -m'
 alias gcb='git checkout -b'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'

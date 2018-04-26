@@ -9,6 +9,11 @@
 [color]
     ui = auto
 [alias]
+    st = status
+    ci = commit
+    lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+    oops = commit --amend --no-edit
+    review-local = "!git lg @{push}.."
     co = checkout
     lg = log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     s = status -s
@@ -21,7 +26,6 @@
     current-branch-name = ! git branch | grep '*' | sed 's/* //'
     dc = diff --cached
     df = diff --color
-    l = log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %C(white bold)%s%Creset %C(white dim)(by %an %ar)%Creset'
     ll = !git l --all
     pl = pull
     sa = stash apply
@@ -92,3 +96,15 @@
 [tag]
     # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
     sort = version:refname
+[merge]
+    keepBackup = false
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    tool = p4merge
+[difftool "p4merge"]
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
