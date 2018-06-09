@@ -1,6 +1,6 @@
 [user]
-    email = wab2com@gmail.com
-    name = wabdsgn
+	email = wab2com@gmail.com
+	name = wabdsgn
 [core]
     pager = cat
     editor = sublime -w
@@ -108,3 +108,8 @@
     tool = p4merge
 [difftool "p4merge"]
     cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
