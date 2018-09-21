@@ -18,6 +18,7 @@
   df = diff --color
   ll = !git l --all
   pl = pull
+  plr = pull --rebase
   sa = stash apply
   sl = stash list
   ss = stash save
