@@ -1,5 +1,8 @@
 # - Git -
 
+
+alias gcj='gitmoji -c'
+
 # from og-my-zsh git plugin (https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)
 
 # alias g='git'
