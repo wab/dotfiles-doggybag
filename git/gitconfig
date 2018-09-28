@@ -114,6 +114,8 @@
 
 [core]
 
+  editor = subl -w
+
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes

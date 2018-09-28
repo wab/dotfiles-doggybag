@@ -5,6 +5,8 @@ else
   alias ls="ls --color"
 fi
 
+alias zshrc="subl $HOME/.zshrc"
+
 alias l="ls"
 alias ll="ls -lh"
 alias lla="ls -la"
@@ -27,7 +29,13 @@ alias cd.='cd $(readlink -f .)'    # Go to real dir (i.e. if current dir is link
 # yarn
 
 alias y="yarn"
+alias yga="yarn global add"
 alias yst="yarn start"
 alias yad="yarn add"
 alias yrm="yarn remove"
 alias yup="yarn update"
+
+## Docker
+alias dpsa="docker ps -a"
+alias dcup="docker-compose up"
+alias dcupd="docker-compose up -d"

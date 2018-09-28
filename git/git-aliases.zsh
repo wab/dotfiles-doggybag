@@ -1,42 +1,45 @@
 # - Git -
-alias g='git'
-alias s="git status"
 
-alias ga='git add'
-alias gaa='git add --all'
-alias gapa='git add --patch'
+# from og-my-zsh git plugin (https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)
 
-alias gb='git branch'
+# alias g='git'
+# alias s="git status"
 
-alias gc='git commit -v'
-alias gcm='git commit -m'
-alias gcb='git checkout -b'
-alias gcf='git config --list'
-alias gcl='git clone --recursive'
-alias gclean='git reset --hard && git clean -dfx'
-alias gco='git checkout'
+# alias ga='git add'
+# alias gaa='git add --all'
+# alias gapa='git add --patch'
 
-alias gd='git diff'
-alias gdw='git diff --word-diff'
+# alias gb='git branch'
 
-alias gf='git fetch'
-alias gfa='git fetch --all --prune'
-alias gl='git pull'
-alias glg='git log --stat --color'
-alias glgp='git log --stat --color -p'
-alias glgg='git log --graph --color'
-alias glgga='git log --graph --decorate --all'
-alias glgm='git log --graph --max-count=10'
-alias glo='git log --oneline --decorate --color'
-alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
-alias glog='git log --oneline --decorate --color --graph'
+# alias gc='git commit -v'
+# alias gcm='git commit -m'
+# alias gcb='git checkout -b'
+# alias gcf='git config --list'
+# alias gcl='git clone --recursive'
+# alias gclean='git reset --hard && git clean -dfx'
+# alias gco='git checkout'
 
-alias gm='git merge'
+# alias gd='git diff'
+# alias gdw='git diff --word-diff'
 
-alias gp='git push'
-alias gpd='git push --dry-run'
-alias gpoat='git push origin --all && git push origin --tags'
-compdef _git gpoat=git-push
-alias gpu='git push upstream'
-alias gpv='git push -v'
+# alias gf='git fetch'
+# alias gfa='git fetch --all --prune'
+# alias gl='git pull'
+# alias glg='git log --stat --color'
+# alias glgp='git log --stat --color -p'
+# alias glgg='git log --graph --color'
+# alias glgga='git log --graph --decorate --all'
+# alias glgm='git log --graph --max-count=10'
+# alias glo='git log --oneline --decorate --color'
+# alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+# alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+# alias glog='git log --oneline --decorate --color --graph'
+
+# alias gm='git merge'
+
+# alias gp='git push'
+# alias gpd='git push --dry-run'
+# alias gpoat='git push origin --all && git push origin --tags'
+# compdef _git gpoat=git-push
+# alias gpu='git push upstream'
+# alias gpv='git push -v'

@@ -1,14 +1,38 @@
 ### Personal stuff
 
-export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
 ZSH_THEME="cobalt2"
+ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh
+
+# plugins
 plugins=(
+  osx
+  sudo
+  almostontop
+  docker
   git
+  git-flow
+  npm
+  yarn
+  pip
+  brew
+  vscode
+  ssh
+  sudo
+  z
+  zsh-autosuggestions
+  zsh-completions
+  zsh-iterm-touchbar
+  zsh-syntax-highlighting
 )
+
 source $ZSH/oh-my-zsh.sh
-export EDITOR='sublime'
+
+export LANG=en_US.UTF-8
+
+export EDITOR='subl'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -17,3 +41,11 @@ export EDITOR='sublime'
 ZSH_DIR=$(dirname $(readlink ~/.zshrc))
 . ${ZSH_DIR}/aliases.zsh
 . ${ZSH_DIR}/../git/git-aliases.zsh
+. ${ZSH_DIR}/functions.zsh
+
+## PURE
+# autoload -U promptinit; promptinit
+# prompt pure
+
+# Make zsh know about hosts already accessed by SSH
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
